@@ -47,6 +47,12 @@
       </nav>
 
       <div class="nav-right">
+        <!-- Theme Toggle (System / Light / Dark) -->
+        <button type="button" class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle Theme" data-tooltip="Toggle Theme">
+          <svg class="icon-sun" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+          <svg class="icon-moon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+        </button>
+
         <a href="assets/Poovarasan_D_Resume.pdf" download="Poovarasan_D_Resume.pdf" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
           Resume
@@ -124,6 +130,19 @@
             </button>
           </div>
         </div>
+
+        <div class="hero-avatar-wrapper reveal">
+          <div class="hero-avatar-card">
+            <div class="hero-avatar-inner">
+              <img src="assets/profile.jpg" alt="Poovarasan D - AI & ML Engineer Student">
+            </div>
+            <div class="hero-avatar-badge">
+              <h4>Poovarasan D</h4>
+              <p>AI & ML Engineering • RMD EC</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- =========================================================================
@@ -141,7 +160,7 @@
           <div class="about-card reveal">
             <div class="about-text">
               <p>
-                I am an <strong>Artificial Intelligence & Machine Learning Engineering student</strong> currently in my Pre-Final Year at <strong>RMD Engineering College</strong>. I have a strong passion for transforming complex data into actionable insights and intelligent predictive models.
+                I am an <strong>Artificial Intelligence & Machine Learning Engineering student</strong> currently in my 3rd year at <strong>RMD Engineering College</strong>. I have a strong passion for transforming complex data into actionable insights and intelligent predictive models.
               </p>
               <p>
                 My technical journey centers on developing robust skills in <strong>Python programming, Machine Learning algorithms, and Data Analytics frameworks</strong>. Through practical internships and real-world project development, I have gained hands-on experience in data preprocessing, exploratory analysis, model evaluation, and visual dashboard creation using Power BI and Excel.
@@ -259,99 +278,111 @@
     </section>
 
     <!-- =========================================================================
-         Featured Projects Section
+         Featured Projects Section (Clean Content-Focused Cards, Images Removed)
          ========================================================================= -->
     <section id="projects">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">Practical Work</span>
           <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Interactive showcase of practical Machine Learning models and Data Analytics solutions.</p>
+          <p class="section-subtitle">Showcase of practical Machine Learning models, predictive pipelines, and Data Analytics solutions.</p>
         </div>
 
         <div class="projects-grid">
           <!-- Project 1 -->
           <article class="project-card reveal">
-            <div class="project-img-wrapper">
-              <img src="assets/project_credit_score.png" alt="Credit Score Model Prediction">
+            <div class="project-card-header">
+              <div class="project-icon-box">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
               <span class="project-category-badge">Machine Learning</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Credit Score Model Prediction</h3>
-              <p class="project-description">
-                Developed a predictive machine learning pipeline to categorize credit risk levels using financial features, data preprocessing, EDA, and model evaluation metrics.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">NumPy</span>
-                <span class="tech-tag">Scikit-learn</span>
-              </div>
-              <div class="project-links">
-                <button type="button" onclick="openProjectModal('credit-score')" class="btn btn-primary">
-                  View Details
-                </button>
-                <a href="https://github.com/poovarasu-git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  GitHub
-                </a>
-              </div>
+
+            <h3 class="project-title">Credit Score Model Prediction</h3>
+            <p class="project-description">
+              Developed a predictive machine learning pipeline to categorize customer credit risk levels using financial data, comprehensive exploratory data analysis (EDA), feature engineering, model training, and performance evaluation.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">Machine Learning</span>
+            </div>
+
+            <div class="project-links">
+              <button type="button" onclick="openProjectModal('credit-score')" class="btn btn-primary">
+                View Details
+              </button>
+              <a href="https://github.com/poovarasu-git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                GitHub
+              </a>
             </div>
           </article>
 
           <!-- Project 2 -->
           <article class="project-card reveal">
-            <div class="project-img-wrapper">
-              <img src="assets/project_superstore.png" alt="Superstore Sales Data Analytics">
+            <div class="project-card-header">
+              <div class="project-icon-box">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+              </div>
               <span class="project-category-badge">Data Analytics</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Superstore Sales Data Analytics</h3>
-              <p class="project-description">
-                Analyzed multi-region Superstore transactional sales data in Power BI and Excel to uncover profitability trends, regional insights, and product category performance.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Microsoft Excel</span>
-                <span class="tech-tag">Power BI</span>
-                <span class="tech-tag">Data Analytics</span>
-              </div>
-              <div class="project-links">
-                <button type="button" onclick="openProjectModal('superstore-sales')" class="btn btn-primary">
-                  View Details
-                </button>
-                <a href="https://github.com/poovarasu-git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  GitHub
-                </a>
-              </div>
+
+            <h3 class="project-title">Superstore Sales Data Analytics</h3>
+            <p class="project-description">
+              Analyzed multi-region Superstore transactional sales data in Power BI and Excel to uncover profitability trends, regional sales distribution, product category bottlenecks, and business growth insights.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech-tag">Microsoft Excel</span>
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Data Analytics</span>
+              <span class="tech-tag">Data Visualization</span>
+            </div>
+
+            <div class="project-links">
+              <button type="button" onclick="openProjectModal('superstore-sales')" class="btn btn-primary">
+                View Details
+              </button>
+              <a href="https://github.com/poovarasu-git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                GitHub
+              </a>
             </div>
           </article>
 
           <!-- Project 3 -->
           <article class="project-card reveal">
-            <div class="project-img-wrapper">
-              <img src="assets/project_handwritten.png" alt="Handwritten Character Recognizer">
+            <div class="project-card-header">
+              <div class="project-icon-box">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              </div>
               <span class="project-category-badge">AI / Computer Vision</span>
             </div>
-            <div class="project-content">
-              <h3 class="project-title">Handwritten Character Recognizer</h3>
-              <p class="project-description">
-                Engineered a computer vision and deep learning project for recognizing handwritten characters utilizing image processing, feature extraction, and neural network training.
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Neural Networks</span>
-                <span class="tech-tag">Computer Vision</span>
-              </div>
-              <div class="project-links">
-                <button type="button" onclick="openProjectModal('handwritten-recognizer')" class="btn btn-primary">
-                  View Details
-                </button>
-                <a href="https://github.com/poovarasu-git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
-                  GitHub
-                </a>
-              </div>
+
+            <h3 class="project-title">Handwritten Character Recognizer</h3>
+            <p class="project-description">
+              Engineered a machine learning and computer vision pipeline for recognizing handwritten characters utilizing digital image processing, contour feature extraction, and neural network classification.
+            </p>
+
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Neural Networks</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">Machine Learning</span>
+            </div>
+
+            <div class="project-links">
+              <button type="button" onclick="openProjectModal('handwritten-recognizer')" class="btn btn-primary">
+                View Details
+              </button>
+              <a href="https://github.com/poovarasu-git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" aria-label="GitHub Repository">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                GitHub
+              </a>
             </div>
           </article>
         </div>
@@ -380,7 +411,7 @@
                 <h3 class="company-name">CodeAlpha</h3>
                 <span class="role-badge">Intern</span>
               </div>
-              <span class="mode-badge">Remote Internship</span>
+              <span class="mode-badge">🌐 Remote Internship</span>
               <div class="timeline-body">
                 <p>
                   Engaged in practical machine learning software development. Gained experience in structuring end-to-end ML workflows, model creation, and evaluation.
@@ -403,7 +434,7 @@
                 <h3 class="company-name">Spark Info Solutions</h3>
                 <span class="role-badge">Intern</span>
               </div>
-              <span class="mode-badge">Offline Internship</span>
+              <span class="mode-badge">🏢 Offline Internship</span>
               <div class="timeline-body">
                 <p>
                   Participated in hands-on data analytics and business intelligence workflows, focusing on real-world retail datasets.
@@ -420,45 +451,204 @@
     </section>
 
     <!-- =========================================================================
-         Education & Certifications Section
+         Education Section
          ========================================================================= -->
     <section id="education">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Academic Background</span>
-          <h2 class="section-title">Education & Credentials</h2>
-          <p class="section-subtitle">Engineering degree foundation and continuous professional learning.</p>
+          <span class="section-tag">Academic Foundation</span>
+          <h2 class="section-title">Education</h2>
+          <p class="section-subtitle">Strong technical and theoretical foundations in Artificial Intelligence and Machine Learning engineering.</p>
         </div>
 
-        <div class="edu-cert-grid">
-          <!-- Education Card -->
-          <div class="info-card reveal">
-            <div class="info-card-header">
-              <div class="info-card-icon">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+        <div class="education-wrapper">
+          <div class="education-card reveal">
+            <div class="education-header">
+              <div class="education-icon">
+                <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
               </div>
-              <h3 class="info-card-title">Education</h3>
+              <div>
+                <h3 class="institution-name">RMD Engineering College</h3>
+                <p class="degree-name">B.Tech — Artificial Intelligence & Machine Learning Engineering</p>
+              </div>
             </div>
 
-            <h4 class="institution-name">RMD Engineering College</h4>
-            <p class="degree-name">B.Tech  Artificial Intelligence & Machine Learning Engineering</p>
-            <span class="status-tag">Current Status: 3rd Year Student</span>
-          </div>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+              Enrolled in a comprehensive curriculum covering artificial intelligence algorithms, statistical learning, neural network architectures, data engineering, database design, and algorithmic problem-solving.
+            </p>
 
-          <!-- Certifications Card -->
-          <div class="info-card reveal" id="certifications">
-            <div class="info-card-header">
-              <div class="info-card-icon">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
-              </div>
-              <h3 class="info-card-title">Certifications</h3>
-            </div>
-
-            <div class="cert-placeholder">
-              <svg width="36" height="36" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 11H5m14 0l-7-7m7 7l-7 7"></path></svg>
-              <p>Certifications will be added soon.</p>
+            <div class="education-details">
+              <span class="status-tag">Current Status: 3rd Year Student</span>
+              <span class="status-tag">Specialization: AI & Machine Learning</span>
+              <span class="status-tag">Focus: Autonomous Systems & Data Analytics</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Certifications & Badges Section
+         ========================================================================= -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Verified Credentials</span>
+          <h2 class="section-title">Certifications & Badges</h2>
+          <p class="section-subtitle">Verified professional credentials from Oracle University, comprehensive technical evaluations from SHL, and specialized badges in NoSQL & SQL mastery.</p>
+        </div>
+
+        <!-- Subsection 1: Technical & Professional Certifications -->
+        <h3 class="subsection-title reveal">Professional Certifications & Profiles</h3>
+        
+        <div class="certifications-grid">
+          <!-- Cert 1: Agentic AI -->
+          <article class="cert-card reveal">
+            <div class="cert-thumbnail-wrapper">
+              <img src="assets/cert_agentic_ai.png" alt="Oracle Agentic AI Certified Foundations Associate Certificate">
+              <span class="cert-type-pill">Oracle University</span>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">Technical Certification</span>
+              <h4 class="cert-title">Agentic AI Certified Foundations Associate</h4>
+              
+              <div class="cert-meta-info">
+                <div class="cert-meta-row">
+                  <span>Issued Date:</span>
+                  <strong>July 12, 2026</strong>
+                  <span>(Valid until July 12, 2028)</span>
+                </div>
+                <div class="cert-meta-row">
+                  <span>Verification ID:</span>
+                  <strong style="font-family: var(--font-mono); color: var(--accent-cyan);">102985217AAI26OFA</strong>
+                </div>
+              </div>
+
+              <p class="cert-description">
+                Certifies foundational capability in building goal-oriented, multi-step autonomous AI workflows. Establishes proficiency in core Large Language Model (LLM) concepts, AI agent design patterns (such as ReAct and Plan-and-Execute), tool/function calling loops, LangChain orchestration, OpenAI Agent Stack integration, and Model Context Protocol (MCP) framework execution.
+              </p>
+
+              <div class="cert-footer">
+                <a href="assets/cert_agentic_ai.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  View Verified Certificate (PDF)
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 2: Oracle SQL -->
+          <article class="cert-card reveal">
+            <div class="cert-thumbnail-wrapper">
+              <img src="assets/cert_oracle_sql.png" alt="Oracle AI Database SQL Certified Associate Certificate">
+              <span class="cert-type-pill">Oracle University</span>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">Professional Certificate</span>
+              <h4 class="cert-title">Oracle AI Database SQL Certified Associate</h4>
+              
+              <div class="cert-meta-info">
+                <div class="cert-meta-row">
+                  <span>Issued Date:</span>
+                  <strong>August 27, 2026</strong>
+                </div>
+                <div class="cert-meta-row">
+                  <span>Verification ID:</span>
+                  <strong style="font-family: var(--font-mono); color: var(--accent-cyan);">102985217DB23AISQLOCA</strong>
+                </div>
+              </div>
+
+              <p class="cert-description">
+                Intermediate-level associate credential validating a solid understanding of fundamental SQL concepts within the Oracle Database ecosystem. Demonstrates fluency in query optimization, data retrieval via complex SELECT clauses, Data Manipulation Language (DML), Data Definition Language (DDL) for table creation/constraints, and utilizing Oracle's advanced data handling capabilities.
+              </p>
+
+              <div class="cert-footer">
+                <a href="assets/cert_oracle_sql.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  View Verified Certificate (PDF)
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 3: SHL Candidate Assessment Report -->
+          <article class="cert-card reveal">
+            <div class="cert-thumbnail-wrapper">
+              <img src="assets/report_shl_assessment.png" alt="SHL Candidate Assessment Report Cover">
+              <span class="cert-type-pill">SHL Assessment</span>
+            </div>
+            <div class="cert-content">
+              <span class="cert-issuer">Professional Evaluation Profile</span>
+              <h4 class="cert-title">SHL Candidate Assessment Report</h4>
+              
+              <div class="cert-meta-info">
+                <div class="cert-meta-row">
+                  <span>Assessment Date:</span>
+                  <strong>October 16, 2025</strong>
+                </div>
+                <div class="cert-meta-row">
+                  <span>Candidate Test ID:</span>
+                  <strong style="font-family: var(--font-mono); color: var(--accent-cyan);">413720483487629</strong>
+                </div>
+              </div>
+
+              <p class="cert-description">
+                Absolute-score cognitive and technical profile mapping workplace readiness. The report evaluates core competencies scored out of 100, checking English Comprehension (CEFR A2 standard), Advanced Quantitative Ability, Logical Reasoning (inductive, deductive, and abductive), Essay writing clarity, and Level-1 Computer Science fundamentals involving fundamental Data Structures like Stacks, Queues, Trees, and Graphs.
+              </p>
+
+              <div class="cert-footer">
+                <a href="assets/report_shl_assessment.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="width: 100%;">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                  View Full Assessment Report (PDF)
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Subsection 2: Digital Skill Badges & Achievements -->
+        <h3 class="subsection-title reveal" style="margin-top: 4rem;">Digital Badges & Problem Solving Achievements</h3>
+
+        <div class="badges-grid">
+          <!-- Badge 1: MongoDB Skill -->
+          <article class="badge-card reveal">
+            <div class="badge-media">
+              <img src="assets/badge_mongodb.png" alt="MongoDB Basics for Students Skill Badge">
+            </div>
+            <div class="badge-info">
+              <span class="badge-type-tag">MongoDB • Digital Learning Badge</span>
+              <h4 class="badge-title">MongoDB Skill: MongoDB Basics for Students</h4>
+              <p class="badge-description">
+                This skill badge marks the successful completion of foundational NoSQL training designed specifically for student developers. It covers core document-model architectures, CRUD database operations, indexing basics, and working within the MongoDB ecosystem.
+              </p>
+              <div class="project-tech" style="margin-top: 0.75rem; margin-bottom: 0;">
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">NoSQL</span>
+                <span class="tech-tag">CRUD Operations</span>
+                <span class="tech-tag">Indexing</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Badge 2: LeetCode SQL 50 Badge -->
+          <article class="badge-card reveal">
+            <div class="badge-media">
+              <img src="assets/badge_leetcode_sql.png" alt="LeetCode SQL 50 Mastery Badge">
+            </div>
+            <div class="badge-info">
+              <span class="badge-type-tag">LeetCode • SQL Mastery Achievement</span>
+              <h4 class="badge-title">LeetCode SQL 50 Achievement Badge</h4>
+              <p class="badge-description">
+                Awarded for solving and mastering comprehensive SQL problem sets on LeetCode. Demonstrates hands-on fluency in query optimization, complex multi-table joins, subqueries, grouping & aggregations, conditional expressions, and window functions.
+              </p>
+              <div class="project-tech" style="margin-top: 0.75rem; margin-bottom: 0;">
+                <span class="tech-tag">LeetCode SQL</span>
+                <span class="tech-tag">Complex Joins</span>
+                <span class="tech-tag">Window Functions</span>
+                <span class="tech-tag">Aggregations</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -629,10 +819,6 @@
       </button>
 
       <div class="modal-body">
-        <div class="modal-img-wrapper">
-          <img id="modalImage" src="" alt="Project Detail Image">
-        </div>
-
         <span class="modal-category" id="modalCategory">Category</span>
         <h3 class="modal-title" id="modalTitle">Project Title</h3>
 

@@ -1,11 +1,57 @@
 /**
  * Poovarasan D - AI & ML Engineering Portfolio
- * Interactive Functionality & Micro-interactions
+ * Adaptive System Theme, Project Modals, & Micro-interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // ------------------------------------------------------------------------
-  // 1. Mobile Menu Drawer Navigation
+  // 1. System Default Theme Management
+  // ------------------------------------------------------------------------
+  const themeToggle = document.getElementById('themeToggle');
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function getSystemTheme() {
+    return prefersDarkScheme.matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'system') {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.removeItem('portfolio-theme');
+    } else {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('portfolio-theme', theme);
+    }
+  }
+
+  // Initial Theme load: stored preference or system default
+  const savedTheme = localStorage.getItem('portfolio-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    applyTheme(savedTheme);
+  } else {
+    // Follows system default
+    applyTheme('system');
+  }
+
+  // React to OS system theme changes automatically
+  prefersDarkScheme.addEventListener('change', (e) => {
+    if (!localStorage.getItem('portfolio-theme')) {
+      // No manual lock, automatically adapt to system change
+      document.documentElement.removeAttribute('data-theme');
+    }
+  });
+
+  // Toggle button click: toggle between Light and Dark
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentActiveTheme = document.documentElement.getAttribute('data-theme') || getSystemTheme();
+      const nextTheme = currentActiveTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+    });
+  }
+
+  // ------------------------------------------------------------------------
+  // 2. Mobile Menu Drawer Navigation
   // ------------------------------------------------------------------------
   const mobileToggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
@@ -27,20 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------------------
-  // 2. Header Scroll Effect & Active Section Highlighting
+  // 3. Header Scroll Effect & Active Section Highlighting
   // ------------------------------------------------------------------------
   const header = document.getElementById('header');
   const sections = document.querySelectorAll('section[id]');
 
   function handleScroll() {
-    // Header shadow on scroll
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
 
-    // Active Section Tracking
     const scrollPosition = window.scrollY + 120;
 
     sections.forEach(section => {
@@ -59,10 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Initial check
+  handleScroll();
 
   // ------------------------------------------------------------------------
-  // 3. Scroll Reveal Animations (IntersectionObserver)
+  // 4. Scroll Reveal Animations (IntersectionObserver)
   // ------------------------------------------------------------------------
   const revealElements = document.querySelectorAll('.reveal');
 
@@ -70,29 +114,28 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Reveal once
+        observer.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
   });
 
   revealElements.forEach(el => revealObserver.observe(el));
 
   // ------------------------------------------------------------------------
-  // 4. Project Modal Interactivity & Data Setup
+  // 5. Project Modal Interactivity & Data Setup
   // ------------------------------------------------------------------------
   const projectsData = {
     'credit-score': {
       title: 'Credit Score Model Prediction',
       category: 'Machine Learning',
-      image: 'assets/project_credit_score.png',
       problem: 'Financial institutions require accurate and automated risk evaluation models to categorize customer creditworthiness based on personal and financial parameters.',
       approach: 'Leveraged customer dataset preprocessing, extensive exploratory data analysis (EDA), feature engineering, and model training using algorithms such as Logistic Regression and Random Forest classifier.',
       keyFeatures: [
         'Data cleaning and missing value imputation',
-        'Feature scaling and categoric encoding',
+        'Feature scaling and categorical encoding',
         'Model training & hyperparameter tuning',
         'Comprehensive evaluation via precision, recall, and ROC-AUC metrics'
       ],
@@ -102,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'superstore-sales': {
       title: 'Superstore Sales Data Analytics',
       category: 'Data Analytics',
-      image: 'assets/project_superstore.png',
       problem: 'Retail management needs comprehensive visibility into multi-region sales performance, profitability bottlenecks, and customer purchasing patterns to optimize inventory and sales strategies.',
       approach: 'Cleaned and structured raw transactional sales data in Excel, modeled relations, created DAX calculations, and constructed an interactive Power BI dashboard with dynamic drill-downs.',
       keyFeatures: [
@@ -117,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'handwritten-recognizer': {
       title: 'Handwritten Character Recognizer',
       category: 'AI / Machine Learning',
-      image: 'assets/project_handwritten.png',
       problem: 'Recognizing user handwritten text requires robust computer vision models capable of handling handwriting variations, stroke thickness, and noise.',
       approach: 'Built a deep learning neural network pipeline in Python utilizing OpenCV for image preprocessing, feature extraction, and convolutional neural layers for character classification.',
       keyFeatures: [
@@ -138,8 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const data = projectsData[projectId];
     if (!data || !projectModal) return;
 
-    document.getElementById('modalImage').src = data.image;
-    document.getElementById('modalImage').alt = data.title;
     document.getElementById('modalTitle').textContent = data.title;
     document.getElementById('modalCategory').textContent = data.category;
     document.getElementById('modalProblem').textContent = data.problem;
@@ -190,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close modal on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && projectModal && projectModal.classList.contains('active')) {
       closeModal();
@@ -198,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ------------------------------------------------------------------------
-  // 5. Copy Email to Clipboard Feature
+  // 6. Copy Email to Clipboard Feature
   // ------------------------------------------------------------------------
   const copyEmailBtns = document.querySelectorAll('.js-copy-email');
   const toast = document.getElementById('toast');
@@ -225,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ------------------------------------------------------------------------
-  // 6. Contact Form Email Composition Handler
+  // 7. Contact Form Email Composition Handler
   // ------------------------------------------------------------------------
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
@@ -247,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------------------
-  // 7. Back-to-Top Button Observer
+  // 8. Back-to-Top Button Observer
   // ------------------------------------------------------------------------
   const backToTopBtn = document.getElementById('backToTop');
   if (backToTopBtn) {
